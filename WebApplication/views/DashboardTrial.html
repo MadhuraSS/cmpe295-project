@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+
+<head>
+	<!---do not alter the below 1 tag--><!---IMPORTANT TAGS-->
+	 <base href="/">
+
+
+	<title>Remote Health Monitoring System</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Remote Health Assist helps track your medical history and book appointments easily"/>
+	<!-- default-css-files -->
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+	<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all">
+	<!-- default-css-files -->
+	<!-- Online fonts -->
+	<link href="http://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet">
+	<!-- //Online fonts -->
+	<!-- style.css-file -->
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<!-- //style.css-file -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+
+  <!---do not alter the below 2  tags--><!---IMPORTANT TAGS-->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <!-- UI-Router -->
+ 	 <script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+ 	  <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.1.js"></script>
+
+
+</head>
+<!-- Head -->
+
+<body>
+
+ <div ng-app = "myApp" ng-controller="dashBoardController">
+	<!-- //popup for sign up form -->
+	<!--banner-section-starts-here-->
+	<section class="banner jarallax">
+		<div class="navigation">
+			<div class="container">
+				<nav class="navbar navbar-default">
+					<div class="navbar-header navbar-left">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					</div>
+					<div class="logo">
+						<h1><a class="navber-brand" href="Register.html"><i class="fa fa-heartbeat" aria-hidden="true"></i>Remote Health Assist</a></h1>
+					</div>
+									<div class="col-md-4 col-sm-4 col-xs-4 top-right">
+					<a href="#" data-toggle="modal" data-target="#logout" ng-click="logout()"><span></span> Logout</a>
+
+				</div>
+				
+					<div class="collapse navbar-collapse navbar-right navigation-right" id="bs-example-navbar-collapse-1" >
+						<nav class="link-effect-3 w3ls-navma" id="link-effect-3">
+							<!-- patient profile nav bar-->
+							<ul class="nav1 navbar-nav nav nav-wil" ng-model="patientNavBar" ng-hide="patientNavBar">
+								<li class="active"><a data-hover="Request Appointment" ui-sref="request_appointment" class="scroll"> Request Appointment</a></li>
+								<li><a data-hover="Update profile" ui-sref="update_profile" class="scroll">Update profile</a></li>
+								<li><a data-hover="Upcoming Appointments" ui-sref="upcoming_appointment" class="scroll">Upcoming Appointments</a></li>
+								<li><a data-hover="Pending Appointments" ui-sref="pending_appointment" class="scroll">Pending Appointments</a></li>
+								<li><a data-hover="Past Appointments" ui-sref="past_appointment" class="scroll">Past Appointments</a></li>		
+								<li><a data-hover="Get Recommendation" ui-sref="get_recommendation" class="scroll">Get Recommendation</a></li>	
+							</ul>
+							<!--doctor profile nav bar-->
+							 <ul class="nav1 navbar-nav nav nav-wil" ng-model="doctorNavBar" ng-hide="doctorNavBar">
+								<li class="active"><a data-hover="Upcoming Appointments" ui-sref="doc_upcoming_appointment" class="scroll">Upcoming Appointments</a></li>
+								<li><a data-hover="Pending Appointments" ui-sref="doc_pending_appointment" class="scroll">Pending Appointments</a></li>
+								<li><a data-hover="Past Appointments" ui-sref="doc_past_appointment" class="scroll">Past Appointments</a></li>
+								<li><a data-hover="Current Session" ui-sref="doc_current_session" class="scroll">Current Session</a></li>			
+							</ul>
+						</nav>
+					</div>
+					
+					
+				</nav>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+
+		  <!---do not alter the below 2  tags--><!---IMPORTANT TAGS-->
+		<div ui-view></div>
+  		<script src="angularJS/routerController.js"></script>
+
+   </script> 
+	
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<!-- password-script -->
+	<script type="text/javascript">
+	</script>
+	
+	
+	<script src="js/responsiveslides.min.js"></script>
+	<script>
+		// You can also use "$(window).load(function() {"
+		$(function () {
+			// Slideshow 4
+			$("#slider4").responsiveSlides({
+				auto: true,
+				pager: true,
+				nav: false,
+				speed: 500,
+				namespace: "callbacks",
+				before: function () {
+					$('.events').append("<li>before event fired.</li>");
+				},
+				after: function () {
+					$('.events').append("<li>after event fired.</li>");
+				}
+			});
+
+		});
+	</script>
+	<!--banner Slider starts Here-->
+	<script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+	<!-- //Default-JavaScript-File -->
+	<!-- gallery-pop-up -->
+	<script src="js/jquery.chocolat.js"></script>
+	<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen">
+	<!--light-box-files -->
+	<script type="text/javascript">
+		$(function () {
+			$('.agileinfo_portfolio_grid a').Chocolat();
+		});
+	</script>
+	<!-- //gallery-pop-up -->
+
+	<!-- FlexSlider -->
+	<script defer src="js/jquery.flexslider.js"></script>
+	<script type="text/javascript">
+		$(function () {});
+		$(window).load(function () {
+			$('.flexslider').flexslider({
+				animation: "slide",
+				start: function (slider) {
+					$('body').removeClass('loading');
+				}
+			});
+		});
+	</script>
+	<!-- FlexSlider -->
+	<!-- start-smoth-scrolling-nav -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+
+	<!-- start-smoth-scrolling -->
+	<!-- Slide-To-Top JavaScript (No-Need-To-Change) -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 100,
+				easingType: 'linear'
+			};
+		});
+	</script>
+	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 0;"> </span></a>
+	<!-- //Slide-To-Top JavaScript -->
+	<!-- jarallax scrolling -->
+	<script src="js/jarallax.js"></script>
+	<script src="js/SmoothScroll.min.js"></script>
+	<script type="text/javascript">
+		/* init Jarallax */
+		$('.jarallax').jarallax({
+			speed: 0.5,
+			imgWidth: 1366,
+			imgHeight: 768
+		})
+	</script>
+	<!-- //jarallax scrolling -->
+	<!-- smooth scrolling -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+		});
+	</script>
+	<!-- //smooth scrolling -->
+	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+	
+	
+</body>
+
+</html>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:alpha="0.9"
+    android:padding="2dp">
+
+    <!--<TextView-->
+    <!--android:id="@+id/dialog_title_purpose"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Title"-->
+    <!--android:gravity="center"-->
+    <!--android:padding="30dp"-->
+    <!--android:textSize="30dp"-->
+    <!--android:layout_margin="0dp"-->
+    <!--android:elevation="15dp"-->
+    <!--android:alpha="0.9"-->
+    <!--android:textColor="@android:color/white"-->
+    <!--android:background="@android:color/holo_blue_dark"-->
+    <!--/>-->
+
+    <!--"_id": "59fb371baf5f790012018b39",-->
+    <!--"patient_id": "neharege28@gmail.com",-->
+    <!--"doctor_id": "jelsonsantos89@gmail.com",-->
+    <!--"doctor_name": "Doctor Test",-->
+    <!--"purpose": "Physical Exam",-->
+    <!--"status": "pending",-->
+    <!--"date": "2017-10-25T00:00:00.000Z",-->
+    <!--"start_time": "2017-10-25T10:00:00.000Z",-->
+    <!--"end_time": "2017-10-25T11:00:00.000Z",-->
+    <!--"location": "Hospital Way",-->
+    <!--"start_time_timestamp": 1508925600000,-->
+    <!--"__v": 0-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="2dp"-->
+    <!--android:background="@android:color/darker_gray"-->
+    <!--android:backgroundTint="@android:color/black" />-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@android:color/darker_gray"
+        android:backgroundTint="@android:color/holo_blue_light" />
+
+    <TextView
+        android:id="@+id/dialog_app_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:background="@color/secondaryLightColor"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Title"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@android:color/darker_gray"
+        android:backgroundTint="@android:color/holo_blue_dark" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.20"
+            android:text="Doctor:"
+            android:textSize="15dp"
+
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/dialog_doctor_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.75"
+            android:text="Doctor Name"
+
+            android:textSize="15dp" />
+
+        <!--<ImageView-->
+        <!--android:id="@+id/user_profile_activity_name_edit"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/ic_mode_edit_black_24dp"-->
+        <!--/>-->
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.20"
+            android:text="Email :"
+            android:textSize="15dp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/dialog_doctor_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="0.75"
+            android:text="Doctor's Email"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.20"
+            android:text="Date :"
+            android:textSize="15dp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/dialog_appointment_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="0.75"
+            android:text="Date"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/darker_gray" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.20"
+            android:text="Time :"
+            android:textSize="15dp"
+
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/dialog_app_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="0.75"
+            android:text="Time"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.23"
+            android:text="Location:"
+            android:textSize="15dp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/dialog_app_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="0.75"
+            android:text="Location"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+    <View
+    android:layout_width="match_parent"
+    android:layout_height="1.5dp"
+    android:background="@android:color/darker_gray"
+    android:backgroundTint="@android:color/holo_blue_light" />
+
+    <Button
+        android:id="@+id/dialog_app_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/secondaryLightColor"
+        android:padding="10dp"
+        android:text="OK"
+        android:textColor="@color/black" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@android:color/darker_gray"
+        android:backgroundTint="@android:color/holo_blue_light" />
+
+</LinearLayout>

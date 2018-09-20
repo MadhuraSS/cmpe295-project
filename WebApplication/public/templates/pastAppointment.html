@@ -1,0 +1,43 @@
+<section class="about" id="past_appointment">
+<div class="container">
+			<h2>past appointments</h2>
+			<div class="about-grids">	
+				<br>
+					<div class="w3ls-grid-head text-center">
+					</div>
+					<div class="abt-form text-center">
+						<form>
+							<div>
+								<div class="w3ls-pr">
+									<table id="customers">
+									        <tr>
+									    	<th>Doctor Name</th>
+									    	<th>Purpose</th>
+									    	<th>Date</th>
+									    	<th>Start Time</th>
+									    	<th>End Time</th>
+									    	<th>Location</th>
+									    	
+									  		</tr>
+									       <tr ng-repeat="person in mydata | filter:{ status: 'finished' }">
+									       <td>{{person.doctor_name}}</td>
+									        <td>{{person.purpose}}</td>
+									        <td>{{person.date.split('T')[0]}}</td>
+									        <td>{{person.start_time.split('T')[1].substring(0,5)}}</td>
+									        <td>{{person.end_time.split('T')[1].substring(0,5)}}</td>
+									        <td>{{person.location}}</td>
+										   </tr> 
+									</table> 
+								</div>
+							</div>	
+							<div align="left" class="form-group">
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+    						</div>						
+							<div class="clearfix"></div>
+						</form>
+					</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+</section>

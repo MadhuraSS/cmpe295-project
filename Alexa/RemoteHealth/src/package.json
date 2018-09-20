@@ -1,0 +1,16 @@
+{
+  "name": "remotehealth",
+  "version": "1.0.0",
+  "description": "Alexa skill",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jelson Santos",
+  "license": "ISC",
+  "dependencies": {
+    "alexa-sdk": "^1.0.14",
+    "dateformat": "^3.0.2",
+    "request": "^2.81.0"
+  }
+}

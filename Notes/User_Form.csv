@@ -1,0 +1,81 @@
+Questions/Fields,Input Type,Options,Post Request Key,Post Request Value
+,,,,
+User Information,,,,
+Email(Field must be autopopulated after authenticated with Google Firebase),text,,_id,whatever the input text is
+First Name,text,,first_name,whatever the input text is
+Last Name,text,,last_name,whatever the input text is
+Street,text,,street,whatever the input text is
+City,text,,city,whatever the input text is
+State,text,,state,whatever the input text is
+Zip,text,,zip,whatever the input text is
+County,text,,county,whatever the input text is
+Country,text,,country,whatever the input text is
+Phone Number,text,,phone_number,whatever the input text is
+User Type,text,,user_type,whatever the input text is
+Ethnicity ,text,,ethnicity,whatever the input text is
+Gender,text,,gender,whatever the input text is
+Age,text,,age,whatever the input text is
+Doctor,text,,doctor_id,doctor's email
+,,,,
+ Personal Medical History,,,,
+Alcoholism,radio,"Yes, No",alcoholism,yes or no
+Anemia,radio,"Yes, No",anemia,yes or no
+Asthma,radio,"Yes, No",asthma,yes or no
+Concussion,radio,"Yes, No",concussion,yes or no
+Eating Disorder,radio,"Yes, No",eating_disorder,yes or no
+Heart Disease,radio,"Yes, No",heart_disease,yes or no
+High Cholesterol,radio,"Yes, No",high_cholesterol,yes or no
+Kidney or Bladder Problems,radio,"Yes, No",kidney_or_bladder_problems,yes or no
+Loss of Consciousness,radio,"Yes, No",loss_of_consciousness,yes or no
+Overweight or Obesity,radio,"Yes, No",overweight_or_obesity,yes or no
+Seizures or Convulsions,radio,"Yes, No",seizures_or_convulsions,yes or no
+Stroke,radio,"Yes, No",stroke,yes or no
+Surgery,radio,"Yes, No",surgery,yes or no
+Thyroid Problems,radio,"Yes, No",thyroid_problems,yes or no
+Allergies,radio,"Yes, No",allergies,yes or no
+Anxiety or Panic Attack,radio,"Yes, No",anxiety_or_panic_attack,yes or no
+Cancer or Tumor,radio,"Yes, No",cancer_or_tumor,yes or no
+Diabetes,radio,"Yes, No",diabetes,yes or no
+Headaches (severe),radio,"Yes, No",headaches_severe,yes or no
+High Blood Pressure,radio,"Yes, No",high_blood_pressure,yes or no
+Hospitalization,radio,"Yes, No",hospitalization,yes or no
+Liver Disease or Hepatitis,radio,"Yes, No",liver_disease_or_hepatitis,yes or no
+Mononucleosis,radio,"Yes, No",mononucleosis,yes or no
+Psychiatric Problems,radio,"Yes, No",psychiatric_problems,yes or no
+Stomach or Intestinal Problems,radio,"Yes, No",stomach_or_intestinal_problems,yes or no
+Substance Abuse,radio,"Yes, No",substance_abuse,yes or no
+Thrombophlebitis or DVT (blood clots),radio,"Yes, No",thrombophlebitis_or_blood_clots,yes or no
+Tuberculosis or positive TB skin test,radio,"Yes, No",tuberculosis_or_positive_TB_skin_test,yes or no
+Do you smoke?,radio,"Yes, No",smoke,yes or no
+Do you drink alcohol?,radio,"Yes, No",drink_alcohol,yes or no
+Have you ever felt you should cut down on drinking alcohol?,radio,"Yes, No",cut_down_drinking_alcohol,yes or no
+Do you use drugs?,radio,"Yes, No",drugs,yes or no
+Do you have any sleep problems?,radio,"Yes, No",sleep_problems,yes or no
+Are you often sad or depressed?,radio,"Yes, No",sad_or_depressed,yes or no
+Do you get regular physical exercise?,radio,"Yes, No",regular_physical_exercise,yes or no
+Are you sexually active?,radio,"Yes, No",sexually_active,yes or no
+Do you practice safe sex? ,radio,"Yes, No",safe_sex,yes or no
+Have you had any of the of the following?,select,"Chlamydia,Gonorrhea,Herpes,Genital Warts,Syphilis,Trichomonas","chlamydia,gonorrhea,herpes,genital_warts,syphilis,trichomonas","yes or no for each option(by default no, if selected by user, value should be yes)"
+Other,radio,"Yes, No",other,yes or no
+"Comments (If yes, give dates and details)",text,,comments,whatever the input text is
+"FOR WOMEN ONLY: Have you had a history of breast problems (lumps, nipple discharge, cancer) or surgery (including implants, biopsy)?",text,,comments_breast_problems,whatever the input text is
+,,,,
+ Family Medical HIstory,,,,
+Alcoholism,radio,"Yes,No",alcoholism,yes or no
+Cancer (what kind?),radio,"Yes,No",cancer,yes or no
+Epilepsy (seizures),radio,"Yes,No",epilepsy_seizures,yes or no
+High Blood Pressure,radio,"Yes,No",high_blood_pressure,yes or no
+Migraine Headaches,radio,"Yes,No",migraine_headaches,yes or no
+Stroke,radio,"Yes,No",stroke,yes or no
+Psychiatric Problems,radio,"Yes,No",psychiatric_problems,yes or no
+Bleeding Problems,radio,"Yes,No",bleeding_problems,yes or no
+Diabetes (high blood sugar),radio,"Yes,No",diabetes_high_blood_sugar,yes or no
+Heart Disease,radio,"Yes,No",heart_disease,yes or no
+High Cholesterol,radio,"Yes,No",high_cholesterol,yes or no
+Sickle Cell Disease,radio,"Yes,No",sickle_cell_disease,yes or no
+Thyroid Disease,radio,"Yes,No",thyroid_disease,yes or no
+Tuberculosis,radio,"Yes,No",tuberculosis,yes or no
+Arthritis,radio,"Yes,No",arthritis,yes or no
+Nervous Breakdown,radio,"Yes,No",nervous_breakdown,yes or no
+Other,radio,"Yes,No",other,yes or no
+"Comments (If yes to any of the above, please indicate which relatives)",text,,comments,whatever the input text is

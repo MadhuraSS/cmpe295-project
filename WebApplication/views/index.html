@@ -1,0 +1,755 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+
+<head>
+	<title>Remote Health Monitoring System</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Remote Health Assist helps track your medical history and book appointments easily"/>
+	<!-- default-css-files -->
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+	<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all">
+	<!-- default-css-files -->
+	<!-- Online fonts -->
+	<link href="http://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet">
+	<!-- //Online fonts -->
+	<!-- style.css-file -->
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!-- 	<link href="css/register.css" rel="stylesheet"> -->
+	<!-- //style.css-file -->
+		  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script  src="js/remote-health.js"></script>
+</head>
+<!-- Head -->
+
+<body ng-app="homeApp" ng-controller="homeController">
+	<!--header-section-starts-here-->
+	<header>
+		<div class="top-header" id="home">
+			<div class="container">
+				<div class="col-md-8 col-sm-8 col-xs-8 top-left">
+					<p><i class="fa fa-map-marker" aria-hidden="true"></i> One Washington Square, San Jose, CA,USA</p>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-4 top-right">
+					<a href="#" ng-click="clearinvalidPassword()" data-toggle="modal" data-target="#myModal1" ng-model="cookieNotPresent" ng-hide="cookieNotPresent"><span></span> Sign In</a>
+					<a href="#" ng-click="displayDashBoard()" ng-model="cookiePresent" ng-hide="cookiePresent"><span></span> DashBoard</a>
+					<a href="#" data-toggle="modal" data-target="#myModal2" ng-model="cookieNotPresent" ng-hide="cookieNotPresent"><span></span> Sign Up</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</header>
+	<!--//header-section-end-here-->
+	<!-- popup for sign in form -->
+	<div class="modal video-modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div id="small-dialog1" class="mfp-hide book-form">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h3>Sign In </h3>
+					<form>
+						<input type="email" name="Email" class="email" placeholder="Email" ng-model="username" required="" />
+						<input type="password" name="Password" class="password" placeholder="Password" ng-model="password" required="" />
+						<ul>
+							
+						</ul>
+						<h4 ng-model="invalidPassword" ng-hide="invalidPassword"  ng-init="invalidPassword=true" style="color:red; text-align: center;"> Invalid Password/email id </h4>
+						<br>
+						<a href="#">Forgot Password?Contact Administator</a><br>
+						
+						<input type="submit" value="Sign In" ng-click="checkLogin()">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //popup for sign up form -->
+	
+	<div class="modal video-modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div id="small-dialog2" class="mfp-hide book-form">
+					<button type="button"  class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h3>REGISTRATION</h3>
+				<div id="googleAccess">
+					<div id="popUp">
+						<h2 id="h2_pop"><center>Permission Request</center>
+						</h2>
+						<hr>
+						<p><b><center>Remote Health wants to access your Google Calendar:</center></b></p>
+						<br>
+						<center><a class="btn btn-info" role="button" href="register.html" id="googlesubmit">Allow Access</a></center>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+		
+		
+
+		
+	<!--banner-section-starts-here-->
+	<section class="banner jarallax">
+		<div class="navigation">
+			<div class="container">
+				<nav class="navbar navbar-default">
+					<div class="navbar-header navbar-left">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					</div>
+					<div class="logo">
+						<h1><a class="navber-brand" href="index.html"><i class="fa fa-heartbeat" aria-hidden="true"></i>Remote Health Assist</a></h1>
+					</div>
+					<div class="collapse navbar-collapse navbar-right navigation-right" id="bs-example-navbar-collapse-1">
+						<nav class="link-effect-3 w3ls-navma" id="link-effect-3">
+							<ul class="nav1 navbar-nav nav nav-wil">
+								<li class="active"><a data-hover="Home" href="index.html">Home</a></li>
+								
+								<li><a data-hover="Services" href="#services" class="scroll">Services</a></li>
+								<li><a data-hover="Team" href="#staff" class="scroll">Team</a></li>
+								
+								<li><a data-hover="Contact" href="#contact" class="scroll">Contact</a></li>
+							</ul>
+						</nav>
+					</div>
+				</nav>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="w3ls_banner_info">
+			<div class="container">
+				<div class="w3l-banner-grids">
+					<div class="slider">
+						<div class="callbacks_container">
+							<ul class="rslides" id="slider4">
+								<li>
+									<div class="w3ls-text">
+										<h3>welcome to Remote</h3>
+										<h3> Health Assist</h3>
+										<p>Health Monitoring just got easier</p>
+									</div>
+								</li>
+								<li>
+									<div class="w3ls-text">
+										<h3>Good hospitality</h3>
+										<h3>super services</h3>
+										<p>Get Technology Savvy with Remote Health Assist</p>
+									</div>
+								</li>
+								<li>
+									<div class="w3ls-text">
+										<h3>healthy environment</h3>
+										<h3>with clean & Green</h3>
+										<p>Health Records at the tip of your fingers</p>
+									</div>
+								</li>
+								<li>
+									<div class="w3ls-text">
+										<h3>best treatment and </h3>
+										<h3> good care</h3>
+										<p>Keeping a track of one's medical records was never this easy</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--about-section-starts-here-->
+
+	
+	
+	<!-- /services -->
+	<div class="agile_secives jarallax" id="services">
+		<div class="container">
+			<h3>What we Do</h3>
+			<div class="markets-grids">
+				<div class="col-md-4 w3ls-markets-grid">
+					<div class="agileits-icon-grid">
+						<div class="icon-left">
+							<i class="fa fa-eye" aria-hidden="true"></i>
+						</div>
+						<div class="icon-right">
+							<h5>Emergency Unit</h5>
+							<p>Contact the doctor in case of emergency. He will have access to your health history.</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="col-md-4 w3ls-markets-grid">
+					<div class="agileits-icon-grid">
+						<div class="icon-left">
+							<i class="fa fa-ambulance" aria-hidden="true"></i>
+						</div>
+						<div class="icon-right">
+							<h5>Emergency Help</h5>
+							<p>Request help or book an Uber through our Web and Mobile Application.</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="col-md-4 w3ls-markets-grid">
+					<div class="agileits-icon-grid">
+						<div class="icon-left">
+							<i class="fa fa-medkit" aria-hidden="true"></i>
+						</div>
+						<div class="icon-right">
+							<h5>Health Care</h5>
+							<p>Get immediate health assistance remotely. Keeping track of one's health records was never this easy.</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="col-md-4 w3ls-markets-grid">
+					<div class="agileits-icon-grid">
+						<div class="icon-left">
+							<i class="fa fa-flask" aria-hidden="true"></i>
+						</div>
+						<div class="icon-right">
+							<h5>Research</h5>
+							<p>Get Technology Savvy with Alexa Device. Researching on latest technology advances.</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="col-md-4 w3ls-markets-grid">
+					<div class="agileits-icon-grid">
+						<div class="icon-left">
+							<i class="fa fa-line-chart" aria-hidden="true"></i>
+						</div>
+						<div class="icon-right">
+							<h5>Lab Test Reports</h5>
+							<p>You can access your medical health reports by just signing in to your account.</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="col-md-4 w3ls-markets-grid">
+					<div class="agileits-icon-grid">
+						<div class="icon-left">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+						</div>
+						<div class="icon-right">
+							<h5>Appointments</h5>
+							<p>Keep track of your appointments and health history.</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //services -->
+	<!--team-section-end-here-->
+	<section class="team" id="staff">
+		<div class="container">
+			<h3>team </h3>
+			<div class="agile-team-grids">
+				<div class="col-md-3 col-sm-3 col-xs-3 agile-w3ls">
+					<div class="team-grid text-center">
+						<img src="images/t1.jpg" alt="image" class="img-responsive" />
+						<h4>Sharat</h4>
+						
+						<div class="social-icons-tm">
+							<ul>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-3 agile-w3ls">
+					<div class="team-grid text-center">
+						<img src="images/t2.jpg" alt="image" class="img-responsive" />
+						<h4>Neha</h4>
+						
+						<div class="social-icons-tm">
+							<ul>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-3 agile-w3ls">
+					<div class="team-grid text-center">
+						<img src="images/t3.jpg" alt="image" class="img-responsive" />
+						<h4>Madhura</h4>
+						
+						<div class="social-icons-tm">
+							<ul>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-3 agile-w3ls">
+					<div class="team-grid text-center">
+						<img src="images/t4.jpg" alt="image" class="img-responsive" />
+						<h4>Jelson</h4>
+				
+						<div class="social-icons-tm">
+							<ul>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</section>
+	<!--//team-section-end-here-->
+
+	<section class="testimonial jarallax">
+		<div class="container">
+			<h3>testimonial</h3>
+			<div class="testi-grid">
+				<div class="col-md-6 col-sm-6 col-xs-6 w3ls-text-grid">
+					<h4>our staff believe our work and good humanity</h4>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-6 fslider-grid">
+					<div class="flexslider">
+						<ul class="slides">
+							<li>
+								<div class="testi-w3ls text-center">
+									<div class="testi-text">
+										<p> I like the ease with which I can book appointments and view my health records.
+										</p>
+									</div>
+									<div class="testi-img">
+										<img src="images/ts1.jpg" alt="images" />
+										<h5>Angle</h5>
+										<h6>Patient</h6>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="testi-w3ls text-center">
+									<div class="testi-text">
+										<p>I can keep track of patients' health effortlessly. The Web and mobile applications are easy to use and intuitive.
+										</p>
+									</div>
+									<div class="testi-img">
+										<img src="images/ts2.jpg" alt="images" />
+										<h5>Jesse</h5>
+										<h6>Doctor</h6>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="testi-w3ls text-center">
+									<div class=" testi-text">
+										<p>I can contact my doctor easily in case of emergencies, book appointments and communicate using Alexa.
+										</p>
+									</div>
+									<div class="testi-img">
+										<img src="images/ts3.jpg" alt="images" />
+										<h5>Rosse lee</h5>
+										<h6>Patient</h6>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--testimonial-section-end-here -->
+
+	<!--contact-section-end-here-->
+	<section class="contact-map" id="contact">
+		<div class="container">
+			<div class="w3ls-con-map-main-grids">
+				<div class="col-md-6">
+					<div class="w3ls-map">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24561.4917541168!2d-74.26553697858265!3d39.69051118517855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c107b00044297b%3A0x9354ddfde6a7883b!2sManahawkin%2C+Stafford+Township%2C+NJ+08050%2C+USA!5e0!3m2!1sen!2sin!4v1486031546252"
+						    allowfullscreen></iframe>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="wthree-contact-left-grid">
+						<div class="contact-head">
+							<h4>contact us </h4>
+							<div class="information">
+								<ul class="agile-inf">
+									<li><i class="fa fa-home" aria-hidden="true"></i>11/665 postal street, San Jose, CA,USA</li>
+									<li><i class="fa fa-phone" aria-hidden="true"></i>+040 6656 776 665</li>
+									<li><i class="fa fa-envelope" aria-hidden="true"></i><a class="w3ls-a" href="mailto:example@email.com"> mail@example.com</a></li>
+									<li><i class="fa fa-globe" aria-hidden="true"></i><a class="w3ls-a" href="mailto:example@email.com">www.example.com</a></li>
+								</ul>
+							</div>
+
+							<div class="contact-form-w3ls">
+								<form action="#" method="post">
+									<div class="col-sm-6 col-xs-6 w3ls-ma">
+										<input type="text" placeholder="Name" required="required" />
+									</div>
+									<div class="col-sm-6 col-xs-6 w3l-ma">
+										<input type="email" placeholder="E-mail" required="required" />
+									</div>
+									<div class="clearfix"></div>
+									<textarea placeholder="Message" required="required"></textarea>
+									<input type="submit" value="send" />
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</section>
+	<!--//contact-section-end-here-->
+	<!--footer-section-end-here-->
+	<section class="footer-top jarallax">
+		<div class="container">
+			<div class="footer-grids">
+				<div class="w3ls-top-ft text-center">
+					<span>get to know</span>
+					<h3>MISSION</h3>
+					<p>Revolutionising the way the health industry works. </p>
+					<div class="srv-w3ls">
+						<a href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Read More</a>
+					</div>
+				</div>
+				<div class="w3ls-bt-ft">
+					<div class="navigation-w3ls">
+						<nav class="navbar-btm">
+							<div class="logo">
+								<h3><a class="navber-brand" href="index.html"><i class="fa fa-heartbeat" aria-hidden="true"></i>Remote Health Assist</a></h3>
+							</div>
+							<div class="footer-nav">
+								<ul class="nav1 w3ls-ma">
+									<li class="active"><a data-hover="Home" class="scroll" href="#home">Home</a></li>
+									<li><a data-hover="Services" href="#services" class="scroll">Services</a></li>
+									<li><a data-hover="Team" href="#staff" class="scroll">Team</a></li>
+									
+									<li><a data-hover="Contact" href="#contact" class="scroll">Contact</a></li>
+								</ul>
+							</div>
+						</nav>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<div class="col-md-6 col-sm-6 col-xs-6 copy-right-grids">
+						<div class="copy-left">
+							<p class="footer-gd">© 2017 Remote Health Assist. All Rights Reserved. </p>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6 col-xs-6 top-middle">
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+							<li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+						</ul>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Remote Health Assist using Alexa</h4>
+				</div>
+				<div class="modal-body agileits">
+					<div class="modal-img">
+						<img src="images/md.jpg" alt="image">
+					</div>
+					<p>Remote Health Assist using Alexa helps patients and doctors to effortlessly access health records using desktop or mobile device. We aim to provide the best hospitality experience to our patients.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--//Modal -->
+	<!--//footer-section-end-here-->
+	<!-- Default-JavaScript-File -->
+
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<!-- password-script -->
+	<script type="text/javascript">
+
+		
+		window.onload = function () {
+			document.getElementById("password").onchange = validatePassword;
+			document.getElementById("confirm_password").onchange = validatePassword;
+		}
+
+		function validatePassword() {
+			var pass2 = document.getElementById("confirm_password").value;
+			var pass1 = document.getElementById("password").value;
+			if (pass1 != pass2)
+				document.getElementById("confirm_password").setCustomValidity("Passwords Don't Match");
+			else
+				document.getElementById("confirm_password").setCustomValidity('');
+			//empty string means no validation error
+		}
+	</script>
+	<!-- //password-script -->
+
+	<script>
+		var app=angular.module("homeApp",[]);
+		app.controller("homeController",function($rootScope,$scope,$http,$window){
+			const cookieName="rhaSJSU";
+
+
+			var nameEQ = encodeURIComponent(cookieName) + "=";
+		    console.log("document cookie")
+		    console.log(document.cookie)
+		    var ca = document.cookie.split(';');
+			var values=JSON.parse(readCookie(cookieName));
+
+			 if(values==null)
+		     {
+	 	   		//no user cookie---show signin option
+	 	   		$scope.cookieNotPresent=false;
+	 	   		$scope.cookiePresent=true;
+		     }
+		     else{
+		     	//user cookie present---show dashboard
+		     	$scope.cookieNotPresent=true;
+	 	   		$scope.cookiePresent=false;
+		     }
+			function readCookie(cookieName){
+		       	var nameEQ = cookieName + "=";
+		       	for (var i = 0; i < ca.length; i++) {
+		            var c = ca[i];
+		            console.log("c "+i)
+		            console.log(c);
+		            while (c.charAt(0) === ' ') {
+		            	c = c.substring(1, c.length);
+		            }
+		            if (c.indexOf(nameEQ) === 0){
+		            	console.log("3");
+		            	console.log(decodeURIComponent(c.substring(nameEQ.length, c.length)));
+		            	return decodeURIComponent(c.substring(nameEQ.length, c.length));
+		            }  	
+		     	   }
+		     	return null;
+     		}
+
+     		$scope.displayDashBoard=function(){
+     			$window.location.href = "/Dashboard";
+     		}
+
+     		$scope.clearinvalidPassword=function(){
+     			console.log("inside clearinvalidPassword");
+     			$scope.invalidPassword=true;
+     			//$scope.$apply();
+     		}
+
+
+
+			$scope.checkLogin=function(){
+			console.log("1")
+        	if($scope.username !=null && $scope.password!=null){
+            console.log($scope.username + " "+ $scope.password);
+            //https://remote-health-api.herokuapp.com/api/users/'+$scope.username+'/'+$scope.password+'/login
+
+            $.get('https://remote-health-api.herokuapp.com/api/users/'+$scope.username+'/'+$scope.password+'/login',function(response){
+            	console.log(response);
+                console.log(response.message)
+                console.log(response.message=="Login Successful!")
+                 var cookieValue={
+					 	'user':$scope.username,
+					 	'tokens':null,
+					 	'user_type':response.user_type
+					 }
+
+					 cookieValue=JSON.stringify(cookieValue);
+	           
+                	 var cookieName="rhaSJSU";
+					 var date = new Date();
+				     date.setTime(date.getTime() + (1 * 1 * 60 * 60 * 1000));
+				     expires = "; expires=" + date.toGMTString();
+			     	 document.cookie = encodeURIComponent(cookieName) + "=" + encodeURIComponent(cookieValue) + expires + "; path=/";
+
+			     	 console.log("calling /Dashboard")
+				     $window.location.href = "/Dashboard";
+            }).fail(function(res){
+            	$scope.invalidPassword=false;
+            	$scope.$apply();
+            	console.log("no user found")
+
+            	//error pop up
+            });
+      //       $http({
+      //           method:'get',
+      //           url:'https://remote-health-api.herokuapp.com/api/users/'+$scope.username+'/'+$scope.password+'/login'
+      //           // url:'/checkLogin',
+      //           // params:{
+      //           //     'username':$scope.username,
+      //           //     'password':$scope.password
+      //           // }
+      //       }).then(function(response){
+      //           console.log(response);
+      //           console.log(response.data.message+" "+response.data.user_type)
+      //           console.log(response.data.message=="Login Successful!") //if user authentc
+	     //            if(response.data.message=="Login Successful!"){
+	     //            	console.log("login successful")
+	     //            var cookieValue={
+					 // 	'user':$scope.username,
+					 // 	'tokens':null,
+					 // 	'user_type':"patient" //response.data.user_type
+					 // }
+
+					 // cookieValue=JSON.stringify(cookieValue);
+	           
+      //           	 var cookieName="rhaSJSU";
+					 // var date = new Date();
+				  //    date.setTime(date.getTime() + (1 * 1 * 60 * 60 * 1000));
+				  //    expires = "; expires=" + date.toGMTString();
+			   //   	 document.cookie = encodeURIComponent(cookieName) + "=" + encodeURIComponent(cookieValue) + expires + "; path=/";
+
+			   //   	 console.log("calling /Dashboard")
+				  //    $window.location.href = "/Dashboard";
+	                
+      //           }
+      //           else
+      //           {
+      //           	console.log("user not authenticated");
+      //           	//not successful
+      //           	// show error
+      //           }
+      //       }),function errorCallback(response) {
+      //       	console.log("user not authenticated")
+      //           console.log(error);
+
+      //       };
+        }
+	}
+});
+	</script>
+	<script src="js/responsiveslides.min.js"></script>
+	<script>
+		// You can also use "$(window).load(function() {"
+		$(function () {
+			// Slideshow 4
+			$("#slider4").responsiveSlides({
+				auto: true,
+				pager: true,
+				nav: false,
+				speed: 500,
+				namespace: "callbacks",
+				before: function () {
+					$('.events').append("<li>before event fired.</li>");
+				},
+				after: function () {
+					$('.events').append("<li>after event fired.</li>");
+				}
+			});
+
+		});
+	</script>
+	<!--banner Slider starts Here-->
+	<script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+	<!-- //Default-JavaScript-File -->
+	<!-- gallery-pop-up -->
+	<script src="js/jquery.chocolat.js"></script>
+	<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen">
+	<!--light-box-files -->
+	<script type="text/javascript">
+		$(function () {
+			$('.agileinfo_portfolio_grid a').Chocolat();
+		});
+	</script>
+	<!-- //gallery-pop-up -->
+
+	<!-- FlexSlider -->
+	<script defer src="js/jquery.flexslider.js"></script>
+	<script type="text/javascript">
+		$(function () {});
+		$(window).load(function () {
+			$('.flexslider').flexslider({
+				animation: "slide",
+				start: function (slider) {
+					$('body').removeClass('loading');
+				}
+			});
+		});
+	</script>
+	<!-- FlexSlider -->
+	<!-- start-smoth-scrolling-nav -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- start-smoth-scrolling -->
+	<!-- Slide-To-Top JavaScript (No-Need-To-Change) -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 100,
+				easingType: 'linear'
+			};
+		});
+	</script>
+	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 0;"> </span></a>
+	<!-- //Slide-To-Top JavaScript -->
+	<!-- jarallax scrolling -->
+	<script src="js/jarallax.js"></script>
+	<script src="js/SmoothScroll.min.js"></script>
+	<script type="text/javascript">
+		/* init Jarallax */
+		$('.jarallax').jarallax({
+			speed: 0.5,
+			imgWidth: 1366,
+			imgHeight: 768
+		})
+	</script>
+	<!-- //jarallax scrolling -->
+	<!-- smooth scrolling -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+		});
+	</script>
+	<!-- //smooth scrolling -->
+	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+</body>
+
+</html>

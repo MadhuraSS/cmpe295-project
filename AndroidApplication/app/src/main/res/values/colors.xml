@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryBlue">#3F51B5</color>
+    <color name="colorPrimaryDarkBlue">#303F9F</color>
+    <color name="colorAccentBlue">#FF4081</color>
+
+
+    <color name="colorPrimaryRed">#a11010</color>
+    <color name="colorPrimaryDarkRed">#ae1212</color>
+    <color name="colorAccentRed">#FF4081</color>
+
+    <color name="colorPrimary">#26a69a</color>
+    <color name="colorPrimaryDark">#187c71</color>
+    <color name="colorAccent">#0097a7</color>
+    <color name="colorAccentG">#26a69a</color>
+
+    <!--<color name="colorAccentGh">#5df2d6</color>-->
+    <color name="colorAccentGh">#5c6bc0</color>
+
+
+
+
+    <color name="colorPrimaryMaterial">#7986cb</color>
+    <color name="colorPrimaryDarkMaterial">#49599a</color>
+    <color name="colorAccentMaterial">#f48fb1</color>
+
+
+    <color name="colorRed">#c62828</color>
+    <color name="colorGreen">#26a69a</color>
+
+    <color name="colorB1">#00cbcc</color>
+    <color name="colorB2">#76ffff</color>
+    <color name="colorB3">#18ffff</color>
+
+    <color name="blue_grey_500">#607D8B</color>
+    <color name="grey_300">#E0E0E0</color>
+    <color name="blue2">#5c6bc0</color>
+
+
+    <color name="blue_dark">#151b5c</color>
+    <color name="black">#212121</color>
+    <color name="black_light">#26263e</color>
+    <color name="purple_light">#d1c4e9</color>
+    <color name="black_l">#343438</color>
+
+    <color name="black_dark">#000000</color>
+    <color name="yellow_light">#FFEE58</color>
+
+    <color name="material_indigo_transparent">#809fa8da</color>
+
+    <!--<color name="colorPrimaryMaterialBlack">#7986cb</color>-->
+    <!--<color name="colorPrimaryDarkMaterialBlack">#49599a</color>-->
+    <!--<color name="colorAccentMaterialRed">#f48fb1</color>-->
+
+    <!--<color name="primaryColor">#263238</color>-->
+    <!--<color name="primaryLightColor">#4f5b62</color>-->
+    <!--<color name="primaryDarkColor">#000a12</color>-->
+    <!--<color name="secondaryColor">#ef5350</color>-->
+    <!--<color name="secondaryLightColor">#ff867c</color>-->
+    <!--<color name="secondaryDarkColor">#b61827</color>-->
+    <!--<color name="primaryTextColor">#ffffff</color>-->
+    <!--<color name="secondaryTextColor">#000000</color>-->
+
+    <!--<color name="primaryColor">#004d40</color>-->
+    <!--<color name="primaryLightColor">#39796b</color>-->
+    <!--<color name="primaryDarkColor">#00251a</color>-->
+    <!--<color name="secondaryColor">#b71c1c</color>-->
+    <!--<color name="secondaryLightColor">#f05545</color>-->
+    <!--<color name="secondaryDarkColor">#7f0000</color>-->
+    <!--<color name="primaryTextColor">#ffffff</color>-->
+    <!--<color name="secondaryTextColor">#ffffff</color>-->
+
+    <color name="primaryColor">#212121</color>
+    <color name="primaryLightColor">#484848</color>
+    <color name="primaryDarkColor">#000000</color>
+    <color name="secondaryColor">#ffa000</color>
+    <color name="secondaryLightColor">#ffd149</color>
+    <color name="secondaryDarkColor">#c67100</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#000000</color>
+
+
+
+
+
+
+
+
+
+
+</resources>

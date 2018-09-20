@@ -1,0 +1,61 @@
+<html>
+<head>
+	<title> Processing your request </title>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<style>
+	.loader {
+	  border: 16px solid #f3f3f3;
+	  border-radius: 50%;
+	  border-top: 16px solid #3498db;
+	  width: 120px;
+	  height: 120px;
+	  -webkit-animation: spin 2s linear infinite;
+	  animation: spin 2s linear infinite;
+	}
+
+	@-webkit-keyframes spin {
+	  0% { -webkit-transform: rotate(0deg); }
+	  100% { -webkit-transform: rotate(360deg); }
+	}
+
+	@keyframes spin {
+	  0% { transform: rotate(0deg); }
+	  100% { transform: rotate(360deg); }
+	}
+</style>
+</head>
+<body ng-app="loadingDoc" ng-controller="loadingDocController">
+<div class="loader" style="margin:0 auto;margin-top: 250px;"></div>
+</body>
+<script>
+var app=angular.module("loadingDoc",[]);
+app.controller("loadingDocController",function($scope,$http,$window){
+	console.log("in")
+	//parsing it
+	// first is the email, second is the token
+	 var sPageURL = decodeURIComponent(window.location.search.substring(1));
+	 sPageURL=sPageURL.split('&');
+	 var userEmail=sPageURL[0].split('=')[1];
+	 var tokens=sPageURL[1].split('=')[1];
+
+	 var cookieValue={
+	 	'user':userEmail,
+	 	'tokens':JSON.parse(tokens)
+	 }
+
+	 console.log(cookieValue);
+	 cookieValue=JSON.stringify(cookieValue);
+	 //storing it to cookies
+	 // one hour time frame for the cookie
+	 //create cookie
+
+	 var cookieName="rhaSJSU";
+	 var date = new Date();
+     date.setTime(date.getTime() + (1 * 1 * 60 * 60 * 1000));
+     expires = "; expires=" + date.toGMTString();
+     document.cookie = encodeURIComponent(cookieName) + "=" + encodeURIComponent(cookieValue) + expires + "; path=/";
+     $window.location.href = "/register.html";
+})
+</script>
+</html>

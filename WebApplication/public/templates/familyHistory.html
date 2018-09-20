@@ -1,0 +1,241 @@
+
+<section class="about" id="family_history">
+<div class="container" ng-controller="familyHistoryController">
+			<h2>family medical history</h2>
+			<div class="about-grids">
+				
+				<br>
+			
+				
+					<div class="w3ls-grid-head text-center">
+						<h6>family medical history</h6>
+						<h3>patient account</h3>
+					</div>
+					<div class="abt-form text-center">
+						<form>
+							<div class="col-sm-4 col-xs-4 w3ls-lt-form">
+								<div class="w3ls-pr">
+			<table id="disease">	
+			<tr>					
+			<td>Alcoholism:</td>
+			<td>
+            <input type="radio" id="fm_alcoholism_yes" class="fm_alcoholism" value="yes" ng-model="fm_alcoholism"> 
+            <label for="yes">Yes</label>    
+            <input type="radio" id="fm_alcoholism_no" class="fm_alcoholism" value="no" ng-model="fm_alcoholism"> 
+            <label for="no">No</label>
+            </td>  
+            </tr>
+
+        	<tr>					
+			<td>Cancer (what kind?):</td>
+			<td>
+              <input type="radio" id="fm_cancer_yes" class="cancer" value="yes" ng-model="fm_cancer"> 
+              <label for="yes">Yes</label>    
+              <input type="radio" id="fm_cancer_no" class="cancer" value="no" ng-model="fm_cancer"> 
+              <label for="no">No</label>
+            </td>  
+            </tr>
+        	
+           	<tr>					
+			<td>Epilepsy (seizures):</td>
+			<td>
+                <input type="radio" id="fm_epilepsy_seizures_yes" class="epilepsy_seizures" value="yes" ng-model="fm_epilepsy_seizures"> 
+                <label for="yes">Yes</label>    
+                <input type="radio" id="fm_epilepsy_seizures_no" class="epilepsy_seizures" value="no" ng-model="fm_epilepsy_seizures"> 
+                <label for="no">No</label>
+            </td>  
+            </tr>
+
+           	<tr>					
+			<td>High Blood Pressure:</td>
+			<td>
+                  <input type="radio" id="fm_high_blood_pressure_yes" class="high_blood_pressure" value="yes" ng-model="fm_high_blood_pressure"> 
+                  <label for="yes">Yes</label>    
+                  <input type="radio" id="fm_high_blood_pressure_no" class="high_blood_pressure" value="no" ng-model="fm_high_blood_pressure"> 
+                  <label for="no">No</label>
+            </td>  
+            </tr>
+  
+             <tr>					
+			<td>Migraine Headaches:</td>
+			<td>
+                    <input type="radio" id="fm_migraine_headaches_yes" class="migraine_headaches" value="yes" ng-model="fm_migraine_headaches"> 
+                    <label for="yes">Yes</label>    
+                    <input type="radio" id="fm_migraine_headaches_no" class="migraine_headaches" value="no" ng-model="fm_migraine_headaches"> 
+                    <label for="no">No</label>
+            </td>  
+            </tr>  
+            
+            <tr>					
+			<td>Nervous Breakdown:</td>
+			<td>
+                    <input type="radio" id="fm_nervous_breakdown_yes" class="nervous_breakdown" value="yes" ng-model="fm_nervous_breakdown" > 
+                    <label for="yes">Yes</label>    
+                    <input type="radio" id="fm_nervous_breakdown_no" class="nervous_breakdown" value="no" ng-model="fm_nervous_breakdown" > 
+                    <label for="no">No</label>
+            </td>  
+            </tr>                    
+            </table>   
+							</div>
+							</div>		
+							<div class="col-sm-4 col-xs-4 w3ls-lt-form">
+								<div class="w3ls-pr">
+		  <table id="disease">
+		    <tr>
+            <td>Stroke:</td>
+            <td>
+                      <input type="radio" id="fm_stroke_yes" class="stroke" value="yes" ng-model="fm_stroke"> 
+                      <label for="yes">Yes</label>    
+                      <input type="radio" id="fm_stroke_no" class="stroke" value="no" ng-model="fm_stroke"> 
+                      <label for="no">No</label>
+            </td>  
+            </tr>
+		    
+		    <tr>
+            <td>Psychiatric Problems:</td>
+            <td>
+                        <input type="radio" id="fm_psychiatric_problems_yes" class="psychiatric_problems" value="yes" ng-model="fm_psychiatric_problems"> 
+                        <label for="yes">Yes</label>    
+                        <input type="radio" id="fm_psychiatric_problems_no" class="psychiatric_problems" value="no" ng-model="fm_psychiatric_problems"> 
+                        <label for="no">No</label>
+            </td>  
+            </tr> 
+
+		    <tr>
+            <td>Bleeding Problems:</td>
+            <td>
+                         <input type="radio" id="fm_bleeding_problems_yes" class="bleeding_problems" value="yes" ng-model="fm_bleeding_problems"> 
+                          <label for="yes">Yes</label>    
+                          <input type="radio" id="fm_bleeding_problems_no" class="bleeding_problems" value="no" ng-model="fm_bleeding_problems"> 
+                          <label for="no">No</label>
+            </td>  
+            </tr> 
+  
+  		    <tr>
+            <td>Diabetes:</td>
+            <td>
+                <input type="radio" id="fm_diabetes_high_blood_sugar_yes" class="diabetes_high_blood_sugar" value="yes" ng-model="fm_diabetes_high_blood_sugar"> 
+                <label for="yes">Yes</label>    
+                <input type="radio" id="fm_diabetes_high_blood_sugar_no" class="diabetes_high_blood_sugar" value="no" ng-model="fm_diabetes_high_blood_sugar"> 
+                <label for="no">No</label>
+            </td>  
+            </tr> 
+
+  		    <tr>
+            <td>Heart Disease:</td>
+            <td>
+                <input type="radio" id="fm_heart_disease_yes" class="heart_disease" value="yes" ng-model="fm_heart_disease"> 
+                <label for="yes">Yes</label>    
+                <input type="radio" id="fm_heart_disease_no" class="heart_disease" value="no" ng-model="fm_heart_disease"> 
+                <label for="no">No</label>
+            </td>  
+            </tr> 
+            
+            <tr>
+            <td>Other:</td>
+            <td>
+                      <input type="radio" id="fm_other_yes" class="other" value="yes" ng-model="fm_other" > 
+                      <label for="yes">Yes</label>    
+                      <input type="radio" id="fm_other_no" class="other" value="no" ng-model="fm_other" > 
+                      <label for="no">No</label>
+            </td>  
+            </tr>
+
+      </table>
+								</div>
+							</div>
+							<div class="col-sm-4 col-xs-4 w3ls-lt-form">
+								<div class="w3ls-pr">
+	<table id="disease">   
+   	<tr>
+    <td>High Cholesterol:</td>
+    <td>
+                <input type="radio" id="fm_high_cholesterol_yes" class="high_cholesterol" value="yes" ng-model="fm_high_cholesterol"> 
+                <label for="yes">Yes</label>    
+                <input type="radio" id="fm_high_cholesterol_no" class="high_cholesterol" value="no" ng-model="fm_high_cholesterol"> 
+                <label for="no">No</label>
+    </td>  
+    </tr>
+ 
+     <tr>
+    <td>Sickle Cell Disease:</td>
+    <td>
+              <input type="radio" id="fm_sickle_cell_disease_yes" class="sickle_cell_disease" value="yes" ng-model="fm_sickle_cell_disease" > 
+                <label for="yes">Yes</label>    
+                <input type="radio" id="fm_sickle_cell_disease_no" class="sickle_cell_disease" value="no" ng-model="fm_sickle_cell_disease" > 
+                <label for="no">No</label>
+    </td>  
+    </tr>
+
+    <tr>
+    <td>Thyroid Disease:</td>
+    <td>
+                <input type="radio" id="fm_thyroid_disease_yes" class="thyroid_disease" value="yes" ng-model="fm_thyroid_disease" > 
+                <label for="yes">Yes</label>    
+                <input type="radio" id="fm_thyroid_disease_no" class="thyroid_disease" value="no" ng-model="fm_thyroid_disease" > 
+                <label for="no">No</label>
+    </td>  
+    </tr>
+
+    <tr>
+    <td>Tuberculosis:</td>
+    <td>
+                <input type="radio" id="fm_tuberculosis_yes" class="tuberculosis" value="yes" ng-model="fm_tuberculosis" > 
+                <label for="yes">Yes</label>    
+                <input type="radio" id="fm_tuberculosis_no" class="tuberculosis" value="no" ng-model="fm_tuberculosis" > 
+                <label for="no">No</label>
+    </td>  
+    </tr>
+
+    <tr>
+    <td>Arthritis:</td>
+    <td>
+                  <input type="radio" id="fm_arthritis_yes" class="arthritis" value="yes" ng-model="fm_arthritis" > 
+                  <label for="yes">Yes</label>    
+                  <input type="radio" id="fm_arthritis_no" class="arthritis" value="no" ng-model="fm_arthritis" > 
+                  <label for="no">No</label>
+    </td>  
+    </tr>
+
+     </table>
+	</div>
+	</div>
+							<div id ="text" align="left" class="form-group">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+        <label for="comments">Comments (If yes, give dates and details):</label>
+        <input 
+          type="text"
+          class="form-control" id="comments_fm"
+          ng-model="comments_fm" style="width: 800px; padding: 2px;">
+    </div>						
+							<div class="clearfix"></div>
+							<input id="myBtn" type="submit" value="Submit" ng-click="familyHistorySave()">
+						<!-- The Modal -->
+
+
+
+            <!--modal-->
+            <div id="myModal1" class="modal1">
+            <!-- Modal content -->
+              <div class="modal-content1">
+                <span class="close1">&times;</span>
+                <p>Medical History saved!</p>
+              </div>
+            </div>  
+             <div id="myModal2" class="modal2">
+              <!-- Modal content -->
+                <div class="modal-content2">
+                  <span class="close2">&times;</span>
+                  <p>Sorry ! An Error has occurred.</p>
+                </div>
+            </div>
+						</form>
+					</div>	
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</section>
+	
+	<!--footer-section-end-here-->
+	

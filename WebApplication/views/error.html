@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+  <title>Error Remote Health Assist</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+body 
+.error-template {padding: 40px 15px;text-align: center;}
+.error-actions {margin-top:15px;margin-bottom:15px;}
+.error-actions .btn { margin-right:10px; }
+</style>
+<body ng-app="errorApp" ng-controller="appController">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="error-template">
+                <h1>
+                    Oops!</h1>
+                <h2>
+                    An user with the email id already exists!!</h2>
+                <div class="error-details">
+                    You could register with a new email or redirect to homepage
+                </div>
+                <div class="error-actions">
+                    <a ng-click="redirectToHome()" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span>
+                        Take Me Home </a><a  ng-click="redirectToAccess()" id="googlesubmit" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-repeat"></span> Another email id </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+var app=angular.module("errorApp",[]);
+app.controller("appController",function($scope,$http,$window){
+
+	$scope.redirectToHome=function(){
+		$window.location.href = "/";
+	}
+
+	$scope.redirectToAccess=function(){
+
+		console.log("1");
+		$http({
+			method:'get',
+			url:"https://remote-health-api.herokuapp.com/authenticate"
+		}).then(function(response){
+			$window.location.href=response.data.authUrl
+		},function(error){
+			console.log("error msg");
+			console.log(error);
+		});
+	}
+	
+});
+</script>
+</html>

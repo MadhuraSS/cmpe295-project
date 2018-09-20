@@ -1,0 +1,43 @@
+- Retrieve and see all users(currently one user in our DB):
+	https://remote-health-api.herokuapp.com/api/users
+
+- Get specific user:
+	https://remote-health-api.herokuapp.com/api/users/{users-email}
+	Example: https://remote-health-api.herokuapp.com/api/users/test@gmail.com
+
+	Note: you can use this to check if user is already in our DB and follow the following steps:
+		* Authenticate the user using firabase
+		* After authentication is success, get the email and make a request to https://remote-health-api.herokuapp.com/api/users/{users-email}
+			- you will see the users data with 200 response code if it exist
+			- otherwise, you will get a 404 response code with '{"message": "User not found"}' response message
+				i.e. https://remote-health-api.herokuapp.com/api/users/randomEmail@gmail.com
+		* If users exist, then proceed with successful login, otherwise, have the user go through sign up page
+
+
+- POST Request after filling out form, probably using ajax request:
+	URL: https://remote-health-api.herokuapp.com/api/users
+	Header: Content-Type= application/json
+	data: see https://github.com/J-Santos/cmpe295B-project/blob/master/BackendServer/SampleRequests/user1.json for example data
+
+	Note: If the user doesn't exist, it will respond with a 201 response code and '{"message": "User created!"}' response data. Otherwise, you will a 500 respond code with the error message "User already exists."
+
+
+- Update users info(PUT request)
+	URL: https://remote-health-api.herokuapp.com/api/users/{users-email} (i.e. https://remote-health-api.herokuapp.com/api/users/test@gmail.com)
+	Header: Content-Type= application/json
+	data: whatever fields that need to be updated in json format(_id is primary key and cannot be updated)
+		Example data to update street: 	{
+											"address": {
+												"street": "2544 San Jose Way"
+											}
+										}
+
+- Delete an user
+	URL: https://remote-health-api.herokuapp.com/api/users/{users-email} (i.e. https://remote-health-api.herokuapp.com/api/users/test@gmail.com)
+
+	* You can delete it using Postman, ajax request or through the terminal using curl command
+	(curl -XDELETE https://remote-health-api.herokuapp.com/api/users/test@gmail.com)
+
+
+
+

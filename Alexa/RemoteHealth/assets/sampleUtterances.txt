@@ -1,0 +1,16 @@
+SymptomIntent i have {Symptom}
+SymptomIntent i am feeling {Symptom}
+SymptomIntent i am having {Symptom} symptom
+AMAZON.HelpIntent tell me how to use it
+AMAZON.StopIntent close remote health
+AMAZON.StopIntent exit remote health
+AMAZON.StopIntent finish remote health
+AMAZON.StopIntent end remote health session
+AddAppointmentIntent book an appointment on {Date}
+AddAppointmentIntent from {StartTime} to {EndTime}
+AddAppointmentIntent doctor {Doctor}
+AddAppointmentIntent at {Location}
+AddAppointmentIntent the reason of the appointment is {Reason}
+AddAppointmentIntent my appointment is for {Reason}
+AddAppointmentIntent book appointment on {Date} from {StartTime} to {EndTime} with doctor {Doctor} at {Location} for {Purpose}
+AddAppointmentIntent appointment for {Purpose} on {date} from {StartTime} to {EndTime} with my doctor {Doctor} at his {Location}

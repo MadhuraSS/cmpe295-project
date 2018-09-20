@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+
+<head>
+	<!---do not alter the below 1  tag--><!---IMPORTANT TAGS-->
+	 <base href="/">
+	<title>Remote Health Monitoring System</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Remote Health Assist helps track your medical history and book appointments easily"/>
+	<!-- default-css-files -->
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+	<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all">
+	<!-- default-css-files -->
+	<!-- Online fonts -->
+	<link href="http://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet">
+	<!-- //Online fonts -->
+	<!-- style.css-file -->
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<!-- //style.css-file -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  	<!---do not alter the below 2  tags--><!---IMPORTANT TAGS-->
+  	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <!-- UI-Router -->
+ 	 <script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+ 	  <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.1.js"></script>
+ 	 <script  src="js/remote-health.js"></script>
+</head>
+<!-- Head -->
+
+<body>
+ <div ng-app = "myApp" ng-controller="userRegistrationController">
+	<!-- //popup for sign up form -->
+	<!--banner-section-starts-here-->
+	<section class="banner jarallax">
+		<div class="navigation">
+			<div class="container">
+				<nav class="navbar navbar-default">
+					<div class="navbar-header navbar-left">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					</div>
+					<div class="logo">
+						<h1><a class="navber-brand" href="Register.html"><i class="fa fa-heartbeat" aria-hidden="true"></i>Remote Health Assist</a></h1>
+					</div>
+					<div class="collapse navbar-collapse navbar-right navigation-right" id="bs-example-navbar-collapse-1">
+						<nav class="link-effect-3 w3ls-navma" id="link-effect-3">
+							<ul class="nav1 navbar-nav nav nav-wil">
+							<li class="active"><a data-hover="register" ui-sref="register" class="scroll">Register</a></li>
+								<li ><a data-hover="personal information" ui-sref="personal_info" class="scroll">Personal Information</a></li>
+								<li><a data-hover="personal medical history" ng-model="personal_history" ng-hide="personal_history" ui-sref="personal_history" class="scroll">Personal Medical History</a></li>
+								<li><a data-hover="family medical history" ui-sref="family_history" ng-model="family_history" ng-hide="family_history" class="scroll">Family Medical History</a></li>		
+							</ul>
+						</nav>
+					</div>
+				</nav>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+
+	</section>
+
+	<!---do not alter the below 2  tags--><!---IMPORTANT TAGS-->
+	  <div ui-view></div>
+	  <script src="angularJS/routerController.js"></script>
+
+
+
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<!-- password-script -->
+	<script type="text/javascript">
+	</script>
+	
+	
+	<script src="js/responsiveslides.min.js"></script>
+	<script>
+		// You can also use "$(window).load(function() {"
+		$(function () {
+			// Slideshow 4
+			$("#slider4").responsiveSlides({
+				auto: true,
+				pager: true,
+				nav: false,
+				speed: 500,
+				namespace: "callbacks",
+				before: function () {
+					$('.events').append("<li>before event fired.</li>");
+				},
+				after: function () {
+					$('.events').append("<li>after event fired.</li>");
+				}
+			});
+
+		});
+	</script>
+	<!--banner Slider starts Here-->
+	<script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+	<!-- //Default-JavaScript-File -->
+	<!-- gallery-pop-up -->
+	<script src="js/jquery.chocolat.js"></script>
+	<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen">
+	<!--light-box-files -->
+	<script type="text/javascript">
+		$(function () {
+			$('.agileinfo_portfolio_grid a').Chocolat();
+		});
+	</script>
+	<!-- //gallery-pop-up -->
+
+	<!-- FlexSlider -->
+	<script defer src="js/jquery.flexslider.js"></script>
+	<script type="text/javascript">
+		$(function () {});
+		$(window).load(function () {
+			$('.flexslider').flexslider({
+				animation: "slide",
+				start: function (slider) {
+					$('body').removeClass('loading');
+				}
+			});
+		});
+	</script>
+	<!-- FlexSlider -->
+	<!-- start-smoth-scrolling-nav -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+
+	<!-- start-smoth-scrolling -->
+	<!-- Slide-To-Top JavaScript (No-Need-To-Change) -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 100,
+				easingType: 'linear'
+			};
+		});
+	</script>
+	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 0;"> </span></a>
+	<!-- //Slide-To-Top JavaScript -->
+	<!-- jarallax scrolling -->
+	<script src="js/jarallax.js"></script>
+	<script src="js/SmoothScroll.min.js"></script>
+	<script type="text/javascript">
+		/* init Jarallax */
+		$('.jarallax').jarallax({
+			speed: 0.5,
+			imgWidth: 1366,
+			imgHeight: 768
+		})
+	</script>
+	<!-- //jarallax scrolling -->
+	<!-- smooth scrolling -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+		});
+	</script>
+	<!-- //smooth scrolling -->
+	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+	
+	
+</body>
+
+</html>

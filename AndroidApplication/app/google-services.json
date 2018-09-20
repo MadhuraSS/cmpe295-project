@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1097589372160",
+    "firebase_url": "https://projectheathassist.firebaseio.com",
+    "project_id": "projectheathassist",
+    "storage_bucket": "projectheathassist.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1097589372160:android:2d32829fed196305",
+        "android_client_info": {
+          "package_name": "com.test.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1097589372160-v04mcqv3gigj6ncq2nj62vri22odfqi1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-iPVI97tBKUNPcYtOZz_21li62sB4JmI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
