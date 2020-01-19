@@ -1,0 +1,44 @@
+- Upload data to elasticsearch instance
+curl -XPOST 'https://search-diseases-symptoms-pyhhcjkict7d5ksiazurzo4m2a.us-west-2.es.amazonaws.com/_bulk' --data-binary @diseases_symptoms.json
+
+
+
+
+cat diseases_symptoms.json | jq -c '.[] | {"index": {"_index": "diseases", "_type": "disease", "_id": .id}}, .' | curl -XPOST https://search-diseases-symptoms-pyhhcjkict7d5ksiazurzo4m2a.us-west-2.es.amazonaws.com/_bulk --data-binary @-
+
+
+
+sed -e 's/^/{ "index" : {} }\n/' -i products.json
+
+
+
+
+cat symptoms.json | jq -c '.[] | {"index": {"_index": "diseases", "_type": "disease"}}, .' | curl -XPOST https://search-diseases-symptoms-pyhhcjkict7d5ksiazurzo4m2a.us-west-2.es.amazonaws.com/_bulk --data-binary @-
+
+
+
+{"symptoms": ["testicular swelling","testicular lump","testicular mass"],"disease": "testicle lump"
+}
+
+
+curl -XPOST https://search-diseases-symptoms-pyhhcjkict7d5ksiazurzo4m2a.us-west-2.es.amazonaws.com/symptom/data/ -d '{"symptoms": ["testicular swellingrr","testicular lumpa","testicular mass"],"disease": "testicle issue"}'
+
+
+curl -XPOST https://search-diseases-symptoms-pyhhcjkict7d5ksiazurzo4m2a.us-west-2.es.amazonaws.com/symptom/data/ -d '{"symptoms": ["testicular swelling","testicular lump","testicular mass"],"disease": "testicle lump"}'
+
+curl -XDELETE https://search-diseases-symptoms-pyhhcjkict7d5ksiazurzo4m2a.us-west-2.es.amazonaws.com/symptom/data
+
+{
+  "query": {
+    "match" : {"symptoms" : "headache"}
+  },
+  "size": 2
+}
+
+GET _search
+{
+  "query": {
+    "match_phrase" : {"symptoms" : "severe headache"}
+  },
+  "size": 2000
+}

@@ -1,0 +1,84 @@
+<section class="about" id="doc_pending_appointment">
+<div class="container">
+<h2>pending appointments</h2>
+<div class="about-grids">
+<br>
+<div class="w3ls-grid-head text-center">
+</div>
+<div class="abt-form text-center">
+<form>
+  <div>
+    <div class="w3ls-pr">
+      <table id="customers">
+        <tr>
+        <th>Patient Name</th>
+        <th>Purpose</th>
+        <th>Date</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Location</th>
+        <th>Status</th>
+        </tr>
+        <tr ng-repeat="person in mydata | filter:{ status: 'pending' }">
+        <td>{{person.patient_name}}</td>
+        <td>{{person.purpose}}</td>
+        <td>{{person.date.split('T')[0]}}</td>
+        <td>{{person.start_time.split('T')[1].substring(0,5)}}</td>
+        <td>{{person.end_time.split('T')[1].substring(0,5)}}</td>
+        <td>{{person.location}}</td>
+        <td><input id="myBtn" type="submit" ng-click="onConfirm(person._id,person.patient_id)" value="Confirm">
+        <input id="myBtnDeny" type="submit" ng-click="onDeny(person._id,person.patient_id)" value="Deny">
+        <input id="myBtnAlter" type="submit" ng-click="onAlter(person._id,person.patient_id)" value="Alter"></td>
+        </tr> 
+      </table> 
+  <div id="myModal" class="modal">
+<!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Appointment Confirmed</p>
+    </div>
+  </div>	
+
+
+<div id="myModal1" class="modal">
+<!-- Modal content -->
+  <div class="modal-content">
+    <span class="close1">&times;</span>
+      <p>Appointment Denied</p>
+  </div>
+</div>
+
+<div id="myModal2" class="modal">
+<!-- Modal content -->
+  <div class="modal-content">
+    <span class="close2">&times;</span>
+      <p>ALTER APPOINTMENT</p>
+      <br>
+      New Date: <input type="date" name="date" id="uniqueDate" ng-model="date" style="width:270px;" ><br>
+      Start Time: <input type="time" name="time_start" id="time_start" ng-model="start_time" style="width:270px;" ><br>
+      End Time: <input type="time" name="time_end" id="time_end" ng-model="end_time" style="width:270px;" ><br>
+      <input id="myBtn1" type="submit" ng-click="onFinalAlter()" style="width:350px;" value="Alter">
+    </div>
+</div>
+
+<div id="myModal3" class="modal">
+<!-- Modal content -->
+  <div class="modal-content">
+    <span class="close3">&times;</span>
+      <p>Appointment Altered</p>
+  </div>
+</div>									
+</div>
+</div>	
+<div align="left" class="form-group">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</div>						
+<div class="clearfix"></div>
+</form>
+</div>
+
+<div class="clearfix"></div>
+</div>
+</div>
+</section>

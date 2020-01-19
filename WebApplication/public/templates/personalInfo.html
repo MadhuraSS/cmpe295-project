@@ -1,0 +1,79 @@
+
+<section class="about" id="personal_info">
+<div class="container" ng-controller="personalInfoController">
+			<h2>personal information</h2>
+			<div class="about-grids">
+					<div class="w3ls-grid-head text-center">
+						<h6>personal information</h6>
+						<h3>patient account</h3>
+					</div>
+					<div class="abt-form text-center">
+						<form>
+							<div class="col-sm-4 col-xs-4 w3ls-lt-form">
+								<div class="w3ls-pr">
+									<input type="text" id="first_name" placeholder="First Name" ng-model="first_name" required="required">
+									<input type="text" id="age" placeholder="Age" ng-model="age" required="required">
+									<input type="text" id="street" placeholder="Street" ng-model="street" required="required">
+									<input type="text" id="county" placeholder="County" ng-model="county" required="required">
+									<select id="doctor_id"  ng-model="doctor_name">
+									  <optgroup label = "Choose Doctor">
+										  <option ng-repeat="x in doctorDetails" value="{{x._id}}" ng-model="docNameSelected" ng-change="value={{x._id}}">{{x.name.first_name}} 
+										  	<span><span> {{x.name.last_name}}</option>
+									  </optgroup>
+									</select>
+								</div>
+							</div>
+							<div class="col-sm-4 col-xs-4 w3ls-lt-form">
+								<div class="w3ls-pr">
+									<input type="text" id="last_name" placeholder="Last Name" ng-model="last_name" required="required">
+									<input type="text" id="ethnicity" placeholder="Ethnicity" ng-model="ethnicity" required="required">
+									<input type="text" id="city" placeholder="City" ng-model="city" required="required">
+									<input type="text" id="country" placeholder="Country" ng-model="country" required="required">
+									<select id="user_type" ng-model="user_type">
+									  <optgroup label = "Choose User Type">
+										  <option value='doctor'>Doctor</option>
+										  <option value='patient'>Patient</option>
+									  </optgroup>
+									</select>					
+								</div>
+							</div>
+							<div class="col-sm-4 col-xs-4 w3ls-lt-form">
+								<div class="w3ls-pr">
+									<select id="gender" ng-model="gender">
+										<optgroup label = "Choose Gender">
+										  	<option value='male'>Male</option>
+										 	<option value='female'>Female</option>
+									  	</optgroup>
+									</select>
+									<input type="tel" pattern="^\d{3}-\d{3}-\d{4}$" id="phone_number" placeholder="XXX-XXX-XXXX" ng-model="phone_number" required="required">
+									<input type="text" id="state" placeholder="State" ng-model="state" required="required">
+									<input type="text" id="zip" placeholder="Zip" ng-model="zip" required="required">
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<input type="submit" value="Next" ng-click="personalInfoSave()">
+
+							<!-- modal content -->
+							 <div id="myModal1" class="modal1">
+							  <div class="modal-content1">
+							    <span class="close1">&times;</span>
+							    <p>Doctor Details saved</p>
+							  </div>
+							</div>	
+							 <div id="myModal2" class="modal2">
+							  <!-- Modal content -->
+							  <div class="modal-content2">
+							    <span class="close2">&times;</span>
+							    <p>Sorry ! An Error has occurred.</p>
+							  </div>
+							</div>								
+						</form>
+					</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+</section>
+	
+
+		
+							

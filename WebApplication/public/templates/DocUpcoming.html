@@ -1,0 +1,81 @@
+<section class="about" id="doc_upcoming_appointment">
+<div class="container">
+<h2>upcoming appointments</h2>
+	<div class="about-grids">
+		<br>
+			<div class="w3ls-grid-head text-center">
+			</div>
+			<div class="abt-form text-center">
+			<form>
+				<div>
+					<div class="w3ls-pr">
+						<table id="customers">
+					        <tr>
+					    	<th>Patient Name</th>
+					    	<th>Purpose</th>
+					    	<th>Date</th>
+					    	<th>Location</th>
+					    	<th>Google Calendar</th>
+					    	<th>Status</th>
+					  		</tr>
+					       <tr ng-repeat="person in mydata | filter:{ status: 'approved' }">
+					       <td>{{person.patient_name}}</td>
+					        <td>{{person.purpose}}</td>
+					        <td>{{person.date.split('T')[0]}}</td>
+					        <td>{{person.location}}</td>
+					        <td><a class="btn btn-info" role="button" href="{{person.google_event_link}}" target="_blank">VIEW APPOINTMENT</a></td>
+					        <td><input id="myBtn" type="submit" ng-click="onFinish(person._id)" value="Finish"></td>
+						   </tr> 
+						   </table> 
+					<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+ <div class="modal-content">
+    <span class="close">&times;</span>
+	    <p>ENTER COMMENTS</p>
+	    <input type="text" id="finish_comments" name="finish_comments" ng-model="finish_comments" required="required">
+	    <input id="myBtn" type="submit" ng-click="onFinalFinish()" value="Finish">
+  </div>
+</div>	
+		
+<div id="myModal" class="modal1">
+  <!-- Modal content -->
+  <div class="modal-content1">
+    <span class="close">&times;</span>
+	    <p>ENTER COMMENTS</p>
+	    <input type="text" id="finish_comments" name="finish_comments" ng-model="finish_comments" required="required">
+	    <input id="myBtn" type="submit" ng-click="onFinalFinish()" value="Finish">
+  </div>
+</div>	
+		
+
+ 
+ <div id="myModal1" class="modal1">
+  <!-- Modal content -->
+ <div class="modal-content1">
+    <span class="close1">&times;</span>
+    <p>Profile Updated!</p>
+ </div>
+</div>	
+
+ <div id="myModal2" class="modal2">
+  <!-- Modal content -->
+  <div class="modal-content2">
+    <span class="close2">&times;</span>
+    <p>Sorry ! An Error has occurred.</p>
+  </div>
+</div>				
+</div>
+</div>	
+<div align="left" class="form-group">
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+    </div>						
+	<div class="clearfix"></div>
+</form>
+</div>
+				
+<div class="clearfix"></div>
+</div>
+</div>
+</section>

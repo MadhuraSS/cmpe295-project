@@ -1,0 +1,61 @@
+# Using Naive Bayes for independent events (http://scikit-learn.org/stable/modules/naive_bayes.html)
+#						n
+# Y = arg max_y(P(y) * TT P(x_i | y))
+#					   i=1	
+#
+#file:///Users/jelson/Downloads/1789_Anil_DiseasePredictor.pdf
+#							  n
+# Y = arg max_y(P(Disease) * TT P(symptom_i | Disease))
+#					   		 i=1
+# P(symptom_i | Disease) = N_yi + alpha			N_yi: Frequency of same disease in the dataset
+#						   ____________			N_y: Total symptoms of the particular disease
+#						   N_y + alpha * n 		n: total symptoms in the dataset
+#												alpha: known as Laplace Smoothing
+#
+# We can apply Laplace Smoothing to P(symptom_i | Disease) to prevent instances where 
+# it's not found and probability is 0
+# Laplace Smoothing(http://www.cs.toronto.edu/~bonner/courses/2007s/csc411/lectures/03bayes.zemel.pdf)
+# P(A_i = v_j|c_k) = n_ijk + 1			n_ijk = number of examples where A_i = v_j
+#					 ---------	
+#					 n_k + s_i 			n_k = number of examples in c_k
+#									    s_i = number of possible values of A_i
+#
+# Laplace source 2: https://inst.eecs.berkeley.edu/~cs188/sp12/slides/cs188%20lecture%2020%20--%20naive%20bayes%206PP.pdf
+# P(x|y) = c(x,y) + k
+# 		   __________
+#		   c(y) + k*|X|
+#
+#
+#
+##############################################################################################
+
+# Using Naive Bayes for independent events (http://scikit-learn.org/stable/modules/naive_bayes.html)
+#						n
+# Y = arg max_y(P(y) * TT P(x_i | y))
+#					   i=1	
+#
+#file:///Users/jelson/Downloads/1789_Anil_DiseasePredictor.pdf
+#							  n
+# Y = arg max_y(P(Disease) * TT P(symptom_i | Disease))
+#					   		 i=1
+# P(symptom_i | Disease) = N_yi + alpha			N_yi: Frequency of same disease in the dataset
+#						   ____________			N_y: Total symptoms of the particular disease
+#						   N_y + alpha * n 		n: total symptoms in the dataset
+#												alpha: known as Laplace Smoothing
+#
+# We can apply Laplace Smoothing to P(symptom_i | Disease) to prevent instances where 
+# it's not found and probability is 0
+# Laplace Smoothing(http://www.cs.toronto.edu/~bonner/courses/2007s/csc411/lectures/03bayes.zemel.pdf)
+# P(A_i = v_j|c_k) = n_ijk + 1			n_ijk = number of examples where A_i = v_j
+#					 ---------	
+#					 n_k + s_i 			n_k = number of examples in c_k
+#									    s_i = number of possible values of A_i
+#
+# Laplace source 2: https://inst.eecs.berkeley.edu/~cs188/sp12/slides/cs188%20lecture%2020%20--%20naive%20bayes%206PP.pdf
+# P(x|y) = c(x,y) + k
+# 		   __________
+#		   c(y) + k*|X|
+#
+#
+#
+##############################################################################################

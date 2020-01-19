@@ -1,0 +1,60 @@
+{
+	"intents" : [ 
+		{
+			"intent": "SymptomIntent", 
+			"slots": [
+				{
+					"name": "Symptom",
+					"type": "LIST_OF_SYMPTOMS"
+				}
+			]
+		}, 
+		{
+			"intent": "AddAppointmentIntent", 
+			"slots": [
+				{
+					"name": "Date",
+					"type": "AMAZON.DATE"
+				},
+				{
+					"name": "StartTime",
+					"type": "AMAZON.TIME"
+				},
+				{
+					"name": "EndTime",
+					"type": "AMAZON.TIME"
+				},
+				{
+					"name": "Doctor",
+					"type": "AMAZON.Person"
+				},
+				{
+					"name": "Location",
+					"type": "AMAZON.MedicalOrganization"
+				},
+				{
+					"name": "Reason",
+					"type": "AMAZON.EventType"
+				}
+			]
+		},
+		{
+			"intent" : "AMAZON.YesIntent"
+		}, 
+		{
+			"intent" : "AMAZON.NoIntent"
+		}, 
+		{
+			"intent" : "AMAZON.HelpIntent"
+		}, 
+		{
+			"intent" : "AMAZON.StopIntent"
+		}, 
+		{
+			"intent" : "AMAZON.CancelIntent"
+		}, 
+		{
+      		"intent": "AMAZON.RepeatIntent"
+    	}
+	]
+}

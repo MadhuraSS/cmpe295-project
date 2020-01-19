@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_user_profile"
+            android:icon="@drawable/ic_user_profile"
+            android:title="User Profile"
+            />
+
+        <item
+            android:id="@+id/nav_book_appointment"
+            android:icon="@drawable/ic_add_circle"
+            android:title="Book an Appointment" />
+
+        <item
+            android:id="@+id/nav_calendar"
+            android:icon="@drawable/ic_menu_calendar"
+            android:title="Calendar" />
+
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Tools" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_uber"
+                android:icon="@drawable/ic_local_taxi_black_24dp"
+                android:title="Uber" />
+        </menu>
+    </item>
+
+    <group>
+        <menu>
+            <item
+                android:id="@+id/logout_drawer"
+                android:icon="@drawable/ic_menu_logout"
+                android:title="LOGOUT" />
+        </menu>
+    </group>
+
+
+</menu>

@@ -1,0 +1,29 @@
+Updates
+
+- Create users:
+	POST URL: https://remote-health-api.herokuapp.com/api/users
+	Sample JSON: https://github.com/J-Santos/cmpe295B-project/blob/master/BackendServer/SampleRequests/user1.json
+	Note: "google_calendar_token" need to get it from the cookie
+
+- Check Login password:
+	GET URL: https://remote-health-api.herokuapp.com/api/users/{USER_EMAIL}/{PASSWORD}/login
+		EX: https://remote-health-api.herokuapp.com/api/users/jesantos0527-test@gmail.com/Testing1/login
+	Response:
+		Success: {"message": "Login Successful!}
+		Failure: {"message": "Login Failed!}
+
+- For Doctor only: End appointment
+	PUT URL: https://remote-health-api.herokuapp.com/api/appointments/{APPOINTMENT_ID}/finish
+		BODY DATA: 
+		{
+			"user_id": "{EMAIL_ID_PATIENT}",
+			"doctor_comment": "{DOCTOR_COMMENT}"
+		}
+
+		EXAMPLE: 
+			PUT URL: https://remote-health-api.herokuapp.com/api/appointments/5a1776135d7ddb00143026d3/finish
+			BODY: 
+			{
+				"user_id": "jesantos0527-test@gmail.com",
+				"doctor_comment": "This is the doctor's comment for the appt."
+			}

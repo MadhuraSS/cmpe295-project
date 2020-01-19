@@ -1,0 +1,38 @@
+{
+  "name": "users-api",
+  "version": "1.0.0",
+  "description": "",
+  "engines": {
+    "node": "6.11.1"
+  },
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/J-Santos/cmpe295B-project.git"
+  },
+  "author": "Jelson Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/J-Santos/cmpe295B-project/issues"
+  },
+  "homepage": "https://github.com/J-Santos/cmpe295B-project#cmpe295b-project",
+  "dependencies": {
+    "ajax-request": "^1.2.3",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "elasticsearch": "^13.3.1",
+    "express": "^4.15.2",
+    "express-session": "^1.15.6",
+    "google-auth-library": "^0.11.0",
+    "googleapis": "^22.2.0",
+    "mongoose": "^4.9.1",
+    "natural": "^0.5.4",
+    "request": "^2.83.0",
+    "url": "^0.11.0"
+  }
+}

@@ -1,0 +1,48 @@
+<section class="about" id="doc_current_session">
+<div class="container">
+			<h2>CURRENT SESSION</h2>
+			<div class="about-grids">
+				<br>
+					<div class="w3ls-grid-head text-center">
+					</div>
+					<div class="abt-form text-center">
+						<form>
+							<div>
+								<div class="w3ls-pr">
+								      <table id="customers">
+								        <tr>
+								    	<th>Patient Name</th>
+								    	<th>Gender</th>
+								    	<th>Age</th>
+								    	<th>Ethnicity</th>
+								    	<th>History</th>
+								    	<th>History</th>
+								    	<th>Phone Number</th>
+								    	<th>Patient Street</th>
+								    	<th>Patient County</th>
+								  		</tr>
+								       <tr ng-repeat="person in patients">
+								       <td>{{person.name.first_name}}</td>
+								        <td>{{person.medical_record.gender}}</td>
+								        <td>{{person.medical_record.age}}</td>
+								        <td>{{person.medical_record.ethnicity}}</td>
+								        <td><input id="myBtn" type="submit" ui-sref="individual_info" ng-click="onView(person._id)" style="width:100px;" value="Personal"></td>
+								        <td><input id="myBtn1" type="submit" ui-sref="family_info" ng-click="onViewFamily(person._id)" style="width:100px;" value="Family"></td>
+									    <td>{{person.phone_number}}</td>
+								        <td>{{person.address.street}}</td>
+								        <td>{{person.address.county}}</td>
+									   </tr> 
+									   </table> 
+									</div>
+								</div>	
+							<div align="left" class="form-group">
+								<p>&nbsp;</p>
+								<p>&nbsp;</p>
+							</div>						
+							<div class="clearfix"></div>
+						</form>
+					</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+</section>

@@ -1,0 +1,60 @@
+<section class="about" ng-controller="requestAppointmentController" id="request_appointment">
+<div class="container">
+			<h2>appointment</h2>
+			<div class="about-grids">
+
+				
+					<div class="w3ls-grid-head text-center">
+						<h6>appointment</h6>
+						<h3>online booking</h3>
+					</div>
+					<div class="abt-form text-center">
+						<form>
+							<div class="col-sm-4 col-xs-4 w3ls-lt-form">
+								<div class="w3ls-pr">
+									<!--input type="text" name="doctor_name" placeholder="Doctor's Name" ng-model="doctor_name" required="required"-->
+									  <select  ng-model="doctor_name" ng-change="selectedDoctor()" placeholder="doctor name"> 
+									  	<option ng-repeat="doctor in doctorDetails" ng-model="doctorNameSelected" value="{{$index}}+{{doctor._id}}" ng-change="value={{$index}}+{{doctor._id}}" >{{doctor.name.first_name}}  {{$index}} </option>
+									  </select>
+									<!-- <input type="email" name="doctor_email" placeholder="Doctor's Email" ng-model="doctor_id" required="required"-->
+									<input type="text" name="location" placeholder="Location" ng-model="location" required="required">
+								</div>
+							</div>
+							<div class="col-sm-4 col-xs-4 w3ls-lt-form">
+								<div class="w3ls-pr">
+									<input type="date" name="date" id="uniqueDate" ng-model="date" required="required">
+									<input type="text" name="Purpose" placeholder="Purpose" ng-model="purpose" required="required">
+								</div>
+							</div>
+							<div class="col-sm-4 col-xs-4 w3ls-lt-form">
+								<div class="w3ls-pr">
+									Start Time: <input type="time" name="time" id="time_start" ng-model="start_time" style="width:270px;" required="required">
+									End Time: <input type="time" name="time_end" id="time_end" ng-model="end_time" style="width:270px;" required="required">
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<input id="myBtn" type="submit" ng-click="onSubmit()" value="Book Now">
+
+
+							<!--modal content-->
+							 <div id="myModal1" class="modal1">
+							  <!-- Modal content -->
+							  <div class="modal-content1">
+							    <span class="close1">&times;</span>
+							    <p>Appointment requested!</p>
+							  </div>
+							</div>	
+
+							 <div id="myModal2" class="modal2">
+							  <!-- Modal content -->
+							  <div class="modal-content2">
+							    <span class="close2">&times;</span>
+							    <p>Sorry ! An Error has occurred.</p>
+							  </div>
+							</div>
+						</form>
+					</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+</section>
